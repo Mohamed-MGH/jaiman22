@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { User } from './model/app.mode';
-import * as UserActions from "./actions/app.actions"
+import * as UserActions from './actions/app.actions';
 
 
 @Component({
@@ -11,13 +11,13 @@ import * as UserActions from "./actions/app.actions"
 })
 export class AppComponent {
   title = 'jaiman22';
-  surname
 
-  constructor(private store: Store<User>){
+
+  constructor(private store: Store<User>) {
 
   }
-  onClick(value: User){
-      //this.surname = value
-      this.store.dispatch(new UserActions.AddName(value))
+  onClick(value: User) {
+      // this.surname = value
+      this.store.dispatch(new UserActions.AddName(value));
   }
 }

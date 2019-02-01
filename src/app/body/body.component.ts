@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { User } from '../model/app.mode';
 import { Observable } from 'rxjs/Observable';
-import { async } from '@angular/core/testing';
+import { User } from '../model/app.mode';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-body',
@@ -10,14 +9,11 @@ import { async } from '@angular/core/testing';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  //@Input()name: string
-  name: Observable<User>
-  constructor(private store: Store<User>) { 
-    this.name = store.select('AppName')
-   
-
+// @Input()name: string;
+name: Observable<User>;
+  constructor(private store: Store<User>) {
+    this.name = store.select('AppName');
   }
-
 
   ngOnInit() {
   }
