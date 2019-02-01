@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jaiman22';
+  surname
+  onClick(value){
+      this.surname = value
+  }
 }

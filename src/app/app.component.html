@@ -1,7 +1,9 @@
 <body>
-    <p>Hello Jamal hafez Hashem Jaiman</p>
+    <input placeholder="enter a name" #name>
+    <button (click)="onClick(name.value)">Send</button>
+  <p>Hello Jamal hafez Hashem Jaiman</p>
   <app-heading></app-heading>
-  <app-body></app-body>
+  <app-body [name]="surname"></app-body>
   <app-footer></app-footer>
 </body>
  
