@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeadingComponent } from './heading/heading.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
+import {  StoreModule} from '@ngrx/store'
+import { reducer } from './reducer/app.reducer';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot({
+      AppName: reducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { User } from './model/app.mode';
+import * as UserActions from "./actions/app.actions"
+
 
 @Component({
   selector: 'app-root',
@@ -8,7 +12,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'jaiman22';
   surname
-  onClick(value){
-      this.surname = value
+
+  constructor(private store: Store<User>){
+
+  }
+  onClick(value: User){
+      //this.surname = value
+      this.store.dispatch(new UserActions.AddName(value))
   }
 }
